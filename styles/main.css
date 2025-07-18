@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(115deg, #ffffff, #ffe3, #b9b6b3);
+}
+
+
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 80px;
+    border-bottom: 1px solid black;
+    padding: 50px;
+    background-clip: padding-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+header h1 {
+        /* messing with this */
+    font-family: "Impact", "Arial Black", sans-serif; /* Bold system font */
+    font-size: 10rem; /* Large text */
+    color: #ff00ff; /* Neon magenta */
+    text-shadow: 
+        3px 3px 0 #00ff00, /* Green shadow */
+        -3px -3px 0 #ff0000, /* Red shadow */
+        0 0 10px #ffff00; /* Yellow glow */
+    letter-spacing: 5px; /* Wide letter spacing */
+    text-transform: uppercase; /* All caps */
+    transform: rotate(-3deg); /* Slight tilt */
+    display: inline-block; /* For transform */
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-3deg) scale(1); }
+    50% { transform: rotate(3deg) scale(1.1); }
+    100% { transform: rotate(-3deg) scale(1); }
+}
+
+header h1:hover {
+    animation: wiggle 1s infinite; /* Wiggly animation */
+    color: #00ffff; /* Cyan on hover */
+    text-shadow: 
+        5px 5px 0 #00ff00,
+        -5px -5px 0 #ff0000,
+        0 0 15px #ffff00; /* Brighter glow */
+}
+
+img {
+    width: 100%;
+    border: 1px solid black;
+    margin: 30px 0 0 0;
+}
+
+p {
+    font-size: 16px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+main > div{
+    height: 2200px;
+    gap: 50px;
+}
+
+article.flex-container {
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 30px;
+    flex-wrap: nowrap;
+    padding: 5px;
+}
+
+.articleHeader{
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
+}
+
+.articleAdvice {
+    align-items: center;
+}
+
+.articleHeader h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.articleAdvice > p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.articleAdvice div p {
+    width: 100%;
+    font-size: 18px;
+}
+
+.articleAdvice  div {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-left: 1px solid;
+}
